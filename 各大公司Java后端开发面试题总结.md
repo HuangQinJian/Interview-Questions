@@ -561,6 +561,13 @@ Hibernate二级缓存：把获得的所有数据对象根据ID放入到第二级
 
 ----------
 
+###更新于2017/3/12
+
+[java collection.sort()根据时间排序list](http://www.cnblogs.com/donetbaoxj320/p/3679342.html)
+
+[单点登录原理与简单实现](http://www.importnew.com/22863.html)
+
+----------
 
 ##具体更多资源可前往[Java后端面试总结](https://github.com/HuangQinJian/Interview-questions)
 
