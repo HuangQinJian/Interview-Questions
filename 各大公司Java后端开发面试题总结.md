@@ -569,6 +569,14 @@ Hibernate二级缓存：把获得的所有数据对象根据ID放入到第二级
 
 ----------
 
+###更新于2017/3/13
+
+[AQS详解](http://www.cnblogs.com/waterystone/p/4920797.html)
+
+[Java的concurrent包](http://blog.csdn.net/legendmohenote/article/details/5754117%E2%80%98)
+
+----------
+
 ##具体更多资源可前往[Java后端面试总结](https://github.com/HuangQinJian/Interview-questions)
 
 ----------
