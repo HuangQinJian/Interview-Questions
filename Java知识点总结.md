@@ -1,4 +1,4 @@
-#**索引的实现方式**
+### **索引的实现方式**
 
 1、B+树
     我们经常听到B+树就是这个概念，用这个树的目的和红黑树差不多，也是为了尽量保持树的平衡，当然红黑树是二叉树，但B+树就不是二叉树了，节点下面可以有多个子节点，数据库开发商会设置子节点数的一个最大值，这个值不会太小，所以B+树一般来说比较矮胖，而红黑树就比较瘦高了。
@@ -59,7 +59,7 @@ SELECT * FROM mytable WHREE age=20 AND city="郑州" SELECT * FROM mytable WHREE
 
 ----------
 
-#**线程池中的corenum和maxnum有什么不同？**
+### **线程池中的corenum和maxnum有什么不同？**
 
 (1) 直接提交的队列：该功能由SynchronizedQueue对象提供。SynchronizedQueue是一个特殊的阻塞队列。SynchronizedQueue没有容量，每一个插入操作都要等待一个相应的删除操作，反之每一个删除操作都需要等待对应的插入操作。使用SynchronizedQueue时提交的任务不会被真实的保存，而总是将新任务提交给线程执行，如果没有空闲的线程则尝试创建新的线程，如果线程数量达到最大值就执行决绝策略。使用SynchronizedQueue队列通常要设置很大的maxnumPoolSize，否则很容易执行拒绝策略。可以当做大小为0的队列来理解。
 
@@ -77,7 +77,7 @@ newCachedThreadExecutor()返回核心线程数为0，最大线程数为无穷大
 
 
 ----------
-#**如何找出单链表中的倒数第k个元素？**
+### **如何找出单链表中的倒数第k个元素？**
 
 思路一：
 初看题目，最容易想到的方法就是遍历。首先遍历一遍单链表，得出整个链表的长度n（元素个数从1到n），然后找到倒数第k个元素的位置n-k+1，接着从头遍历到第n-k+1元素，就是倒数第k个元素。但是该方法需要对链表进行两次遍历，遍历的元素个数为n+n-k+1=2n+1-k个。
@@ -91,7 +91,7 @@ newCachedThreadExecutor()返回核心线程数为0，最大线程数为无穷大
 
 ----------
 
-#**多线程缺点？**
+### **多线程缺点？**
 
 1、将给定的工作量划分给过多的线程会造成每个线程的工作量过少，因此可能导致线程启动和终止时的开销比程序实际工作的开销还要多；
 
@@ -108,7 +108,7 @@ newCachedThreadExecutor()返回核心线程数为0，最大线程数为无穷大
 
 ----------
 
-#**迭代和递归的最大区别是？**
+### **迭代和递归的最大区别是？**
 
 递归与迭代都是基于控制结构：迭代用重复结构，而递归用选择结构。
 
@@ -121,7 +121,7 @@ newCachedThreadExecutor()返回核心线程数为0，最大线程数为无穷大
 
 
 ----------
-#**SQL truncate 、delete与drop区别？**
+### **SQL truncate 、delete与drop区别？**
 
 相同点：
 
@@ -165,7 +165,7 @@ truncate 语句缺省情况下见空间释放到 minextents个 extent，除非�
 
 
 ----------
-#**总结常见的mysql数据库优化操作？**
+### **总结常见的mysql数据库优化操作？**
 
 1、Index索引
 
@@ -215,7 +215,7 @@ where 子句中使用参数，会导致全表扫描,因为SQL只有在运行时�
 
 ----------
 
-#**SQL语句中executeQuery、executeUpdate、execute的区别？**
+### **SQL语句中executeQuery、executeUpdate、execute的区别？**
 
 1. ResultSet executeQuery(String sql); 执行SQL查询，并返回ResultSet 对象。
 2. int executeUpdate(String sql); 可执行增，删，改，返回执行受到影响的行数。
@@ -293,7 +293,7 @@ stmt.getMoreResults();
 
 ----------
 
-#**Spring初始化过程？**
+### **Spring初始化过程？**
 
 　　在传统的Java应用中，Bean的生命周期非常简单。Java的关键词new用来实例化Bean（或许他是非序列化的）。这样就够用了。相反，Bean 的生命周期在spring容器中更加细致。理解Spring Bean的生命周期非常重要，因为你或许要利用Spring提供的机会来订制Bean的创建过程。
 
@@ -320,7 +320,7 @@ stmt.getMoreResults();
 　　Bean在Spring应用上下文的生命周期与在Bean工厂中的生命周期只有一点不同，唯一不同的是，如果Bean实现了ApplicationContextAwre接口，setApplicationContext()方法被调用。 
 
 ----------
-#**MySQL Hash索引和B-Tree索引的区别？**
+### **MySQL Hash索引和B-Tree索引的区别？**
 
 　　MySQL Hash索引结构的特殊性，其检索效率非常高，索引的检索可以一次定位，不像B-Tree 索引需要从根节点到枝节点，最后才能访问到页节点这样多次的IO访问，所以 Hash 索引的查询效率要远高于 B-Tree 索引。
 　　可能很多人又有疑问了，既然 Hash 索引的效率要比 B-Tree 高很多，为什么大家不都用 Hash 索引而还要使用 B-Tree 索引呢？任何事物都是有两面性的，Hash 索引也一样，虽然 Hash 索引效率高，但是 Hash 索引本身由于其特殊性也带来了很多限制和弊端，主要有以下这些。
@@ -336,7 +336,7 @@ stmt.getMoreResults();
 对于选择性比较低的索引键，如果创建 Hash 索引，那么将会存在大量记录指针信息存于同一个 Hash 值相关联。这样要定位某一条记录时就会非常麻烦，会浪费多次表数据的访问，而造成整体性能低下。 
 
 ----------
-# **单例与静态变量的区别**
+### **单例与静态变量的区别**
 
 **单例的特点：**
 
@@ -355,7 +355,7 @@ stmt.getMoreResults();
 
 ----------
 
-# **关于HashMap与HashTable**
+### **关于HashMap与HashTable**
 
 <font color=red>**HashMap/HashTable初始容量大小和每次扩充容量大小的不同**</font>
 
@@ -374,7 +374,7 @@ stmt.getMoreResults();
 
 ----------
 
-# **JSP指令元素与动作元素的区别**
+### **JSP指令元素与动作元素的区别**
 
 1：<jsp:include page="top.jsp">先将top.jsp中的java脚本和jsp指令都执行完毕以后再将top.jsp页面加入到引用页面中。
 
@@ -401,7 +401,7 @@ java是在服务器端运行的代码，jsp在服务器的servlet里运行，而
 
 ----------
 
-# **可重入锁 公平锁 读写锁**
+### **可重入锁 公平锁 读写锁**
 
 **1.可重入锁**
 
@@ -470,7 +470,7 @@ public ReentrantLock() {
 另外在ReentrantLock类中定义了很多方法，比如：
 
 > **isFair()        //判断锁是否是公平锁**
->  **isLocked()    //判断锁是否被任何线程获取了**
+> **isLocked()    //判断锁是否被任何线程获取了**
 > **isHeldByCurrentThread()   //判断锁是否被当前线程获取了** 
 > **hasQueuedThreads()   //判断是否有线程在等待该锁**
 
