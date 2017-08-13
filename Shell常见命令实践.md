@@ -27,7 +27,8 @@
 
 ---
 
-**cd：**切换目录
+**cd：** 切换目录
+
 ```
 [bae@cp01-qa-yun-004.cp01.baidu.com huangqinjian]$ cd online_tools
 [bae@cp01-qa-yun-004.cp01.baidu.com online_tools]$ pwd
