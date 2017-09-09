@@ -44,7 +44,3 @@
 <br>
 
 更多可关注我的个人博客[CSDN Blog](http://blog.csdn.net/sinat_35512245)
-
-----
-
- [附掘金秋招征文链接](https://juejin.im/post/59aa744ff265da247c4f145c)
